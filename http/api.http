@@ -1,0 +1,42 @@
+### HEALTH CHECK
+
+GET http://127.0.0.1:8080/api/healthchecker
+Accept: application/json
+
+### CREATE NEW TASK
+
+POST http://127.0.0.1:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Segunda task",
+  "content": "Oi! Essa é a segunda task criada pela API."
+}
+
+### GET ALL TASKS
+
+GET http://127.0.0.1:8080/api/tasks?limit=100&page=1
+Accept: application/json
+
+### GET TASK BY ID
+# ee99d26f-3d85-42b2-a364-48171a930475 -> Primeira task
+# 038aeeec-ab9f-4268-9fb0-0aa9f053a0de -> Segunda task
+
+GET http://127.0.0.1:8080/api/tasks/e2987b7c-6b1d-4248-8b0a-7baddd281733
+Accept: application/json
+
+### DELETE TASK BY ID
+
+DELETE http://127.0.0.1:8080/api/tasks/fbbdb431-ed4c-44fb-9e05-4da824ffbddc
+Accept: application/json
+
+### UPDATE TASK BY ID
+
+PUT http://127.0.0.1:8080/api/tasks/e2987b7c-6b1d-4248-8b0a-7baddd281733
+Content-Type: application/json
+
+{
+  "title": "Terceira task",
+  "content": "Opa, tinha errado! Essa é a TERCEIRA task criada pela API."
+}
+
